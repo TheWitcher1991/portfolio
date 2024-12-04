@@ -37,7 +37,7 @@
 }
 
 .nav__ul .mailto {
-    width: 180px;
+    width: 220px;
     height: 44px;
     flex-shrink: 0;
     border-radius: 8px;
@@ -132,14 +132,14 @@
 }
 
 .header__light > span {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     display: block;
 }
 
 .light__exp {
     color: #ffffff;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .section__title {
@@ -187,7 +187,6 @@
 
 .project__wrap {
     margin: 90px 0;
-    background-image: url(../img/more/lights.png);
     background-size: cover;
 }
 
@@ -197,6 +196,15 @@
     align-items: flex-end;
     width: 100%;
     margin: 50px 0;
+}
+
+.project__item > img {
+    max-height: 550px;
+    height: 100%;
+    max-width: 650px;
+    border-radius: 20px;
+    min-height: 225px;
+    object-fit: cover;
 }
 
 .project__right {
@@ -409,4 +417,59 @@
     color: #ABABAB;
     font-weight: 500;
     font-size: 35px;
+}
+
+.dip__flex {
+    display: flex;
+    align-items: center;
+}
+
+.dip__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 100px);
+}
+
+.diplom__wrap {
+    display: block;
+}
+
+.dip__1 {
+    width: 250px;
+    height: 450px;
+    margin: 0 20px 0 0;
+}
+
+.dip__grid-item {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+}
+
+.dip__grid-item img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.dip__1 img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.dip__6 {
+    margin: 20px 0 0 0;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dip__6 img {
+    object-fit: cover;
+    height: 100%;
+
+    border-radius: 10px;
 }
