@@ -1,7 +1,7 @@
 (function () {
 
     const SKILLS = [
-        {path: ['./static/img/skills/html.png', './static./img/skills/css.png'], name: 'HTML & CSS'},
+        {path: ['./static/img/skills/html.png', './static/img/skills/css.png'], name: 'HTML & CSS'},
         {path: './static/img/skills/js.png', name: 'JavaScript'},
         {path: './static/img/skills/ts.png', name: 'TypeScript'},
         {path: './static/img/skills/python.png', name: 'Python'},
@@ -25,7 +25,7 @@
 
     const PROJECTS = [
         {
-            name: 'TalentSpot',
+            name: 'talentspot.ru',
             desc: 'HR-Tech project',
             path: './static/img/project/talentspot-mockup.png',
             pos: 'left',
@@ -45,8 +45,8 @@
             }
         },
         {
-            name: 'StgauJob',
-            desc: 'Web-tech project',
+            name: 'job.stgau.ru',
+            desc: 'HR-Tech project',
             path: './static/img/project/job.stgau-mockup.png',
             pos: 'left',
             link: {
@@ -55,7 +55,7 @@
             }
         },
         {
-            name: 'Actors',
+            name: 'Prostoprobuy',
             desc: 'Web-tech project',
             path: './static/img/project/actors-mockup.png',
             pos: 'right',
@@ -65,10 +65,20 @@
             }
         },
         {
+            name: 'Prostoprobuy Telegram App',
+            desc: 'Web-tech project',
+            path: './static/img/project/actors-tg-mockup.png',
+            pos: 'left',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991'
+            }
+        },
+        {
             name: 'Lister',
             desc: 'File manager project',
             path: './static/img/project/litser-mockup.png',
-            pos: 'left',
+            pos: 'right',
             link: {
                 type: 'github',
                 url: 'https://github.com/TheWitcher1991/file-manager-nodejs'
@@ -78,7 +88,7 @@
             name: 'StGAU.Navigator',
             desc: 'Mobile app project',
             path: './static/img/project/stgau.navigator-mockup.png',
-            pos: 'right',
+            pos: 'left',
             link: {
                 type: 'github',
                 url: 'https://github.com/TheWitcher1991/stgau.navigator'
