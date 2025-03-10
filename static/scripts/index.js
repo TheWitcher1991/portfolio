@@ -55,6 +55,26 @@
             }
         },
         {
+            name: 'HeyHey',
+            desc: 'Web-tech project',
+            path: './static/img/project/heyhey-mockup.png',
+            pos: 'right',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991'
+            }
+        },
+        {
+            name: 'HeyHey Telegram App',
+            desc: 'Web-tech project',
+            path: './static/img/project/heyhey-tg-mockup.jpg',
+            pos: 'left',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991'
+            }
+        },
+        {
             name: 'Prostoprobuy',
             desc: 'Web-tech project',
             path: './static/img/project/actors-mockup.png',
