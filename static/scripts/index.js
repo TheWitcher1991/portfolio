@@ -114,6 +114,16 @@
                 url: 'https://github.com/TheWitcher1991/stgau.navigator'
             }
         },
+        {
+            name: 'Online library',
+            desc: 'Web-tech project',
+            path: './static/img/project/lib-mockup.png',
+            pos: 'right',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/fullstack-nextjs-asp-net-core'
+            }
+        },
     ]
 
     document.addEventListener('DOMContentLoaded', function () {
