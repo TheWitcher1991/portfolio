@@ -25,8 +25,8 @@
 
     const PROJECTS = [
         {
-            name: 'talentspot.ru',
-            desc: 'HR-Tech project',
+            name: 'TalentSpot',
+            desc: 'HR-Tech project (React & Django)',
             path: './static/img/project/talentspot-mockup.png',
             pos: 'left',
             link: {
@@ -36,7 +36,7 @@
         },
         {
             name: 'REENSQ',
-            desc: 'Forum project',
+            desc: 'Forum project (PHP)',
             path: './static/img/project/reensq.jpg',
             pos: 'right',
             link: {
@@ -45,8 +45,8 @@
             }
         },
         {
-            name: 'job.stgau.ru',
-            desc: 'HR-Tech project',
+            name: 'StgauJob',
+            desc: 'HR-Tech project (PHP)',
             path: './static/img/project/job.stgau-mockup.png',
             pos: 'left',
             link: {
@@ -56,7 +56,7 @@
         },
         {
             name: 'HeyHey',
-            desc: 'Web-tech project',
+            desc: 'Web-tech project (Next.js & Django)',
             path: './static/img/project/heyhey-mockup.png',
             pos: 'right',
             link: {
@@ -66,7 +66,7 @@
         },
         {
             name: 'HeyHey Telegram App',
-            desc: 'Web-tech project',
+            desc: 'Web-tech project (React & Django)',
             path: './static/img/project/heyhey-tg-mockup.jpg',
             pos: 'left',
             link: {
@@ -76,7 +76,7 @@
         },
         {
             name: 'Prostoprobuy',
-            desc: 'Web-tech project',
+            desc: 'Web-tech project (Next.js & Django)',
             path: './static/img/project/actors-mockup.png',
             pos: 'right',
             link: {
@@ -86,7 +86,7 @@
         },
         {
             name: 'Prostoprobuy Telegram App',
-            desc: 'Web-tech project',
+            desc: 'Web-tech project (React & Django)',
             path: './static/img/project/actors-tg-mockup.png',
             pos: 'left',
             link: {
@@ -95,8 +95,28 @@
             }
         },
         {
+            name: 'Online library',
+            desc: 'Web-tech project (Next.js & ASP.NET Core)',
+            path: './static/img/project/lib-mockup.png',
+            pos: 'right',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/fullstack-nextjs-asp-net-core'
+            }
+        },
+        {
+            name: 'Stroy',
+            desc: 'ECM system (Next.js & Django)',
+            path: './static/img/project/stroy-mockup.png',
+            pos: 'left',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/stroy'
+            }
+        },
+        {
             name: 'Lister',
-            desc: 'File manager project',
+            desc: 'File manager project (Electron & Node.js)',
             path: './static/img/project/litser-mockup.png',
             pos: 'right',
             link: {
@@ -106,22 +126,12 @@
         },
         {
             name: 'StGAU.Navigator',
-            desc: 'Mobile app project',
+            desc: 'Mobile app project (React Native)',
             path: './static/img/project/stgau.navigator-mockup.png',
             pos: 'left',
             link: {
                 type: 'github',
                 url: 'https://github.com/TheWitcher1991/stgau.navigator'
-            }
-        },
-        {
-            name: 'Online library',
-            desc: 'Web-tech project',
-            path: './static/img/project/lib-mockup.png',
-            pos: 'right',
-            link: {
-                type: 'github',
-                url: 'https://github.com/TheWitcher1991/fullstack-nextjs-asp-net-core'
             }
         },
     ]
