@@ -1,6 +1,13 @@
 (function () {
 
     const SKILLS = [
+        {path: './static/img/skills/react.png', name: 'React JS'},
+        {path: './static/img/skills/next.png', name: 'Next JS'},
+        {path: './static/img/skills/dj.png', name: 'Django'},
+        {path: './static/img/skills/asp.png', name: 'ASP.NET Core'},
+        {path: './static/img/skills/nest.png', name: 'Nest JS'},
+        {path: './static/img/skills/fastapi.svg', name: 'FastAPI'},
+        {path: './static/img/skills/node.png', name: 'Node JS'},
         {path: ['./static/img/skills/html.png', './static/img/skills/css.png'], name: 'HTML & CSS'},
         {path: './static/img/skills/js.png', name: 'JavaScript'},
         {path: './static/img/skills/ts.png', name: 'TypeScript'},
@@ -8,15 +15,8 @@
         {path: './static/img/skills/c.png', name: 'C++'},
         {path: './static/img/skills/php.png', name: 'PHP'},
         {path: './static/img/skills/sql.png', name: 'SQL'},
-        {path: './static/img/skills/react.png', name: 'React JS'},
-        {path: './static/img/skills/next.png', name: 'Next JS'},
-        {path: './static/img/skills/nest.png', name: 'Nest JS'},
-        {path: './static/img/skills/node.png', name: 'Node JS'},
-        {path: './static/img/skills/dj.png', name: 'Django'},
-        {path: './static/img/skills/fastapi.svg', name: 'FastAPI'},
         {path: './static/img/skills/mysql.png', name: 'MySQL'},
         {path: './static/img/skills/postgresql.png', name: 'PostgreSQL'},
-        {path: './static/img/skills/celery.png', name: 'Celery'},
         {path: './static/img/skills/redis.png', name: 'Redis'},
         {path: './static/img/skills/rabbit.png', name: 'RabbitMQ'},
         {path: './static/img/skills/docker.webp', name: 'Docker'},
@@ -25,13 +25,93 @@
 
     const PROJECTS = [
         {
-            name: 'TalentSpot',
+            name: 'TalentSpot $',
             desc: 'HR-Tech project (React & Django)',
             path: './static/img/project/talentspot-mockup.png',
             pos: 'left',
             link: {
                 type: 'link',
                 url: 'https://talentspot.ru'
+            }
+        },
+        {
+            name: 'HeyHey $',
+            desc: 'Web-tech project (Next.js & Django)',
+            path: './static/img/project/heyhey-mockup.png',
+            pos: 'right',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991'
+            }
+        },
+        {
+            name: 'HeyHey Telegram App $',
+            desc: 'Web-tech project (React & Django)',
+            path: './static/img/project/heyhey-tg-mockup.jpg',
+            pos: 'left',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991'
+            }
+        },
+        {
+            name: 'Prostoprobuy $',
+            desc: 'Web-tech project (Next.js & Django)',
+            path: './static/img/project/actors-mockup.png',
+            pos: 'right',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991'
+            }
+        },
+        {
+            name: 'Prostoprobuy Telegram App $',
+            desc: 'Web-tech project (React & Django)',
+            path: './static/img/project/actors-tg-mockup.png',
+            pos: 'left',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991'
+            }
+        },
+        {
+            name: 'DevOops manager',
+            desc: 'Event platform (Next.js & ASP.NET Core)',
+            path: './static/img/project/stroy-mockup.png',
+            pos: 'right',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/dev-oops-manager'
+            }
+        },
+        {
+            name: 'Online library',
+            desc: 'Web-tech project (Next.js & ASP.NET Core)',
+            path: './static/img/project/lib-mockup.png',
+            pos: 'left',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/fullstack-nextjs-asp-net-core'
+            }
+        },
+        {
+            name: 'Stroy',
+            desc: 'ECM system (Next.js & Django)',
+            path: './static/img/project/stroy-mockup.png',
+            pos: 'right',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/stroy'
+            }
+        },
+        {
+            name: 'Lister',
+            desc: 'File manager project (Electron & Node.js)',
+            path: './static/img/project/litser-mockup.png',
+            pos: 'left',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/file-manager-nodejs'
             }
         },
         {
@@ -45,7 +125,7 @@
             }
         },
         {
-            name: 'StgauJob',
+            name: 'StgauJob $',
             desc: 'HR-Tech project (PHP)',
             path: './static/img/project/job.stgau-mockup.png',
             pos: 'left',
@@ -55,80 +135,10 @@
             }
         },
         {
-            name: 'HeyHey',
-            desc: 'Web-tech project (Next.js & Django)',
-            path: './static/img/project/heyhey-mockup.png',
-            pos: 'right',
-            link: {
-                type: 'github',
-                url: 'https://github.com/TheWitcher1991'
-            }
-        },
-        {
-            name: 'HeyHey Telegram App',
-            desc: 'Web-tech project (React & Django)',
-            path: './static/img/project/heyhey-tg-mockup.jpg',
-            pos: 'left',
-            link: {
-                type: 'github',
-                url: 'https://github.com/TheWitcher1991'
-            }
-        },
-        {
-            name: 'Prostoprobuy',
-            desc: 'Web-tech project (Next.js & Django)',
-            path: './static/img/project/actors-mockup.png',
-            pos: 'right',
-            link: {
-                type: 'github',
-                url: 'https://github.com/TheWitcher1991'
-            }
-        },
-        {
-            name: 'Prostoprobuy Telegram App',
-            desc: 'Web-tech project (React & Django)',
-            path: './static/img/project/actors-tg-mockup.png',
-            pos: 'left',
-            link: {
-                type: 'github',
-                url: 'https://github.com/TheWitcher1991'
-            }
-        },
-        {
-            name: 'Online library',
-            desc: 'Web-tech project (Next.js & ASP.NET Core)',
-            path: './static/img/project/lib-mockup.png',
-            pos: 'right',
-            link: {
-                type: 'github',
-                url: 'https://github.com/TheWitcher1991/fullstack-nextjs-asp-net-core'
-            }
-        },
-        {
-            name: 'Stroy',
-            desc: 'ECM system (Next.js & Django)',
-            path: './static/img/project/stroy-mockup.png',
-            pos: 'left',
-            link: {
-                type: 'github',
-                url: 'https://github.com/TheWitcher1991/stroy'
-            }
-        },
-        {
-            name: 'Lister',
-            desc: 'File manager project (Electron & Node.js)',
-            path: './static/img/project/litser-mockup.png',
-            pos: 'right',
-            link: {
-                type: 'github',
-                url: 'https://github.com/TheWitcher1991/file-manager-nodejs'
-            }
-        },
-        {
             name: 'StGAU.Navigator',
             desc: 'Mobile app project (React Native)',
             path: './static/img/project/stgau.navigator-mockup.png',
-            pos: 'left',
+            pos: 'right',
             link: {
                 type: 'github',
                 url: 'https://github.com/TheWitcher1991/stgau.navigator'
