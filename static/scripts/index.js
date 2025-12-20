@@ -26,7 +26,7 @@
     const PROJECTS = [
         {
             name: 'TalentSpot $',
-            desc: 'HR-Tech project (React & Django)',
+            desc: 'HR-Tech & Ed-Tech project (React & Django)',
             path: './static/img/project/talentspot-mockup.png',
             pos: 'left',
             link: {
@@ -36,7 +36,7 @@
         },
         {
             name: 'HeyHey $',
-            desc: 'Web-tech project (Next.js & Django)',
+            desc: 'HealthTech project (Next.js & Django)',
             path: './static/img/project/heyhey-mockup.png',
             pos: 'right',
             link: {
@@ -46,7 +46,7 @@
         },
         {
             name: 'HeyHey Telegram App $',
-            desc: 'Web-tech project (React & Django)',
+            desc: 'HealthTech  project (React & Django)',
             path: './static/img/project/heyhey-tg-mockup.jpg',
             pos: 'left',
             link: {
@@ -75,6 +75,46 @@
             }
         },
         {
+            name: 'Stroy',
+            desc: 'ECM system (Next.js & Django)',
+            path: './static/img/project/stroy-mockup.png',
+            pos: 'right',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/stroy'
+            }
+        },
+        {
+            name: 'Sandbox FGIS',
+            desc: 'Emulation of work with FGIS (Next.js & FastAPI)',
+            path: './static/img/project/stroy-mockup.png',
+            pos: 'left',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/sandbox-fgis'
+            }
+        },
+        {
+            name: 'DoctorFit',
+            desc: 'Definition of plant diseases (Flutter & Next.js & FastAPI)',
+            path: './static/img/project/stroy-mockup.png',
+            pos: 'right',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/doctor-fit'
+            }
+        },
+        {
+            name: 'My farm',
+            desc: 'Optimization of animal husbandry (Next.js & Django)',
+            path: './static/img/project/stroy-mockup.png',
+            pos: 'left',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991/my-farm'
+            }
+        },
+        {
             name: 'DevOops manager',
             desc: 'Event platform (Next.js & ASP.NET Core)',
             path: './static/img/project/stroy-mockup.png',
@@ -95,20 +135,10 @@
             }
         },
         {
-            name: 'Stroy',
-            desc: 'ECM system (Next.js & Django)',
-            path: './static/img/project/stroy-mockup.png',
-            pos: 'right',
-            link: {
-                type: 'github',
-                url: 'https://github.com/TheWitcher1991/stroy'
-            }
-        },
-        {
             name: 'Lister',
             desc: 'File manager project (Electron & Node.js)',
             path: './static/img/project/litser-mockup.png',
-            pos: 'left',
+            pos: 'right',
             link: {
                 type: 'github',
                 url: 'https://github.com/TheWitcher1991/file-manager-nodejs'
@@ -118,7 +148,7 @@
             name: 'REENSQ',
             desc: 'Forum project (PHP)',
             path: './static/img/project/reensq.jpg',
-            pos: 'right',
+            pos: 'left',
             link: {
                 type: 'github',
                 url: 'https://github.com/TheWitcher1991/REENSQ'
@@ -128,7 +158,7 @@
             name: 'StgauJob $',
             desc: 'HR-Tech project (PHP)',
             path: './static/img/project/job.stgau-mockup.png',
-            pos: 'left',
+            pos: 'right',
             link: {
                 type: 'link',
                 url: 'https://job.stgau.ru'
@@ -138,9 +168,9 @@
             name: 'StGAU.Navigator',
             desc: 'Mobile app project (React Native)',
             path: './static/img/project/stgau.navigator-mockup.png',
-            pos: 'right',
+            pos: 'left',
             link: {
-                type: 'github',
+                type: 'left',
                 url: 'https://github.com/TheWitcher1991/stgau.navigator'
             }
         },
