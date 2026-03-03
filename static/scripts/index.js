@@ -97,7 +97,7 @@
         {
             name: 'DoctorFit',
             desc: 'Definition of plant diseases (Flutter & Next.js & FastAPI)',
-            path: './static/img/project/stroy-mockup.png',
+            path: './static/img/project/doctorfit-mockup.png',
             pos: 'right',
             link: {
                 type: 'github',
@@ -107,7 +107,7 @@
         {
             name: 'My farm',
             desc: 'Optimization of animal husbandry (Next.js & Django)',
-            path: './static/img/project/stroy-mockup.png',
+            path: './static/img/project/myfarm-mockup.png',
             pos: 'left',
             link: {
                 type: 'github',
