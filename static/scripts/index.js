@@ -35,6 +35,26 @@
             }
         },
         {
+            name: 'Startup center StGAU $',
+            desc: 'Ed-Tech project (Next.js & Nest.JS)',
+            path: './static/img/project/learn-mockup.png',
+            pos: 'right',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991'
+            }
+        },
+        {
+            name: 'PAPS $',
+            desc: 'AI & AgriTech project (Next.js & Django & PyTorch)',
+            path: './static/img/project/paps-mockup.jpg',
+            pos: 'left',
+            link: {
+                type: 'github',
+                url: 'https://github.com/TheWitcher1991'
+            }
+        },
+        {
             name: 'HeyHey $',
             desc: 'HealthTech project (Next.js & Django)',
             path: './static/img/project/heyhey-mockup.png',
@@ -87,7 +107,7 @@
         {
             name: 'Sandbox FGIS',
             desc: 'Emulation of work with FGIS (Next.js & FastAPI)',
-            path: './static/img/project/stroy-mockup.png',
+            path: './static/img/project/fgis-mockup.png',
             pos: 'left',
             link: {
                 type: 'github',
@@ -97,7 +117,7 @@
         {
             name: 'DoctorFit',
             desc: 'Definition of plant diseases (Flutter & Next.js & FastAPI)',
-            path: './static/img/project/doctorfit-mockup.png',
+            path: './static/img/project/doctorfit-mockup-2.jpg',
             pos: 'right',
             link: {
                 type: 'github',
@@ -105,7 +125,7 @@
             }
         },
         {
-            name: 'My farm',
+            name: 'MyFarm',
             desc: 'Optimization of animal husbandry (Next.js & Django)',
             path: './static/img/project/myfarm-mockup.png',
             pos: 'left',
