@@ -1,149 +1,1261 @@
 <!DOCTYPE html>
-<!--[if lt IE 6 ]><html class="ie ie6" lang="ru" dir="ltr"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="ru" dir="ltr"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="ru" dir="ltr"> <![endif]-->
-<!--[if IE 9 ]><html class="ie ie9" lang="ru" dir="ltr"> <![endif]-->
-<!--[if IE 10 ]><html class="ie ie10" lang="ru" dir="ltr"> <![endif]-->
-<!--[if (gte IE 11)|!(IE)]><!-->
-<html lang="ru" dir="ltr">
-<!--<![endif]-->
+<html lang="ru">
 <head>
-    <!-- SEO -->
-    <meta charset="UTF-8" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ashot Svazyan — Creative Fullstack Engineer</title>
+<meta name="description" content="Portfolio of a creative fullstack engineer. Building software products with soul." />
+<meta name="author" content="ashot.svazyan@yandex.ru" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600;7..72,700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --neutral-primary-soft: #F9F6F0;
+  --neutral-primary: #F9F6F0;
+  --neutral-secondary-soft: #EFEBE1;
+  --neutral-secondary: #EFEBE1;
+  --neutral-tertiary-soft: #E6E0D4;
+  --neutral-tertiary: #E6E0D4;
+  --neutral-quaternary: #D9D2C4;
+  --heading: #1F2937;
+  --body: #6B7280;
+  --border-dark: #111827;
+  --brand: #EACDC2;
+  --brand-soft: #F5E6E1;
+  --brand-softer: #FDF8F6;
+  --fg-brand-strong: #C29A8A;
+  --dark: #1F2937;
+  --white: #FFFFFF;
+  --shadow-xs: 2px 3px 0 0 var(--border-dark);
+  --shadow-sm: 3px 4px 0 0 var(--border-dark);
+  --shadow-md: 4px 5px 0 0 var(--border-dark);
+  --shadow-lg: 5px 6px 0 0 var(--border-dark);
+  --radius-base: 255px 15px 225px / 15px 225px 15px 255px;
+  --radius-default: 15px 225px 15px 255px / 255px 15px 225px;
+  --radius-sm: 225px 15px 255px / 15px 255px 15px 225px;
 
-    <title>TheWitcher1991</title>
+  --bg: var(--neutral-primary-soft);
+  --bg-alt: var(--neutral-secondary-soft);
+  --text-heading: var(--heading);
+  --text-body: var(--body);
+  --border: var(--border-dark);
+  --font: 'Literata', serif;
+}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta http-equiv="content-language" content="ru" />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="ashot.svazyan@yandex.ru" />
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neutral-primary-soft: #202124;
+    --neutral-primary: #1A1A1D;
+    --neutral-secondary-soft: #202124;
+    --neutral-secondary: #1A1A1D;
+    --neutral-tertiary-soft: #202124;
+    --neutral-tertiary: #303134;
+    --neutral-quaternary: #3C3C3F;
+    --heading: #F3F4F6;
+    --body: #9CA3AF;
+    --border-dark: #F3F4F6;
+    --brand: #EACDC2;
+    --brand-soft: #5C433B;
+    --brand-softer: #3A2A25;
+    --fg-brand-strong: #F5E6E1;
+    --dark: #1F2937;
+    --shadow-xs: 2px 3px 0 0 var(--border-dark);
+    --shadow-sm: 3px 4px 0 0 var(--border-dark);
+    --shadow-md: 4px 5px 0 0 var(--border-dark);
+    --shadow-lg: 5px 6px 0 0 var(--border-dark);
+  }
+}
 
-    <!-- LIBS -->
-    <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet" />
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css" />
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
 
-    <link rel="stylesheet" href="./static/libs/FontAwesome/css/all.min.css" />
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
 
-    <!-- STYLES -->
-    <link rel="stylesheet" href="./static/font/GTWalsheimPro-Black/stylesheet.css">
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(var(--text-body) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
 
-    <link rel="stylesheet" href="./static/styles/vars.css" />
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 1;
+}
 
-    <link rel="stylesheet" href="./static/styles/normalize.css" />
-    <link rel="stylesheet" href="./static/styles/wrapper.css" />
-    <link rel="stylesheet" href="static/styles/wrapper.css">
-    <link rel="stylesheet" href="./static/styles/media.css" />
+section {
+  padding: 64px 0;
+  position: relative;
+}
+
+section:nth-child(even) {
+  background: var(--bg-alt);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font);
+  font-weight: 600;
+  color: var(--text-heading);
+  line-height: 1.1;
+}
+
+h1 { font-size: 40px; letter-spacing: -0.8px; margin-bottom: 16px; }
+h2 { font-size: 32px; margin-bottom: 32px; }
+h3 { font-size: 24px; }
+
+@media (min-width: 768px) {
+  h1 { font-size: 48px; }
+  h2 { font-size: 36px; }
+}
+@media (min-width: 1024px) {
+  h1 { font-size: 56px; }
+  h2 { font-size: 40px; }
+}
+
+p { font-size: 18px; color: var(--text-body); max-width: 65ch; margin-bottom: 16px; }
+small { font-size: 14px; color: var(--text-body); }
+
+a {
+  color: var(--fg-brand-strong);
+  text-decoration: underline;
+  transition: all 0.2s cubic-bezier(.25,.46,.45,.94);
+}
+a:hover { text-decoration: none; }
+
+.section__label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-body);
+  margin-bottom: 8px;
+}
+
+.section__header {
+  margin-bottom: 48px;
+}
+.section__header h2 {
+  margin-bottom: 8px;
+}
+.section__header p {
+  font-size: 20px;
+  max-width: 70ch;
+}
+
+/* ---- Nav ---- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-heading);
+  text-decoration: none;
+}
+.logo:hover { text-decoration: none; }
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav__links a {
+  font-size: 18px;
+  color: var(--text-heading);
+  text-decoration: none;
+  position: relative;
+}
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s cubic-bezier(.25,.46,.45,.94);
+}
+.nav__links a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+.nav__mail {
+  font-size: 18px;
+  color: var(--text-heading);
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 3px solid var(--border);
+  border-radius: var(--radius-default);
+  box-shadow: var(--shadow-xs);
+  transition: all 0.2s cubic-bezier(.25,.46,.45,.94);
+}
+.nav__mail:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translate(-1px,-1px);
+  text-decoration: none;
+}
+
+/* ---- Hero ---- */
+.hero {
+  padding: 80px 0 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .hero__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero__content {
+  position: relative;
+}
+
+.hero__greeting {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  color: var(--text-heading);
+  margin-bottom: 16px;
+}
+
+.hero__greeting-line {
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--fg-brand-strong);
+}
+
+.hero__desc {
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 3px solid var(--border);
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-heading);
+  background: var(--neutral-primary-soft);
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s cubic-bezier(.25,.46,.45,.94);
+}
+.btn:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translate(-2px,-2px) rotate(-1.5deg);
+  text-decoration: none;
+}
+.btn:active {
+  box-shadow: var(--shadow-xs);
+  transform: translate(2px,2px) rotate(1deg);
+}
+
+.btn--brand {
+  background: var(--brand);
+  color: #111827;
+}
+.btn--brand:hover {
+  background: var(--neutral-primary-soft);
+  color: var(--text-heading);
+}
+
+.btn--ghost {
+  background: transparent;
+  box-shadow: none;
+}
+.btn--ghost:hover {
+  background: var(--neutral-tertiary);
+  box-shadow: var(--shadow-sm);
+  transform: translate(-1px,-1px);
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__avatar-wrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: var(--radius-base);
+  border: 3px solid var(--border);
+  background: var(--neutral-secondary-soft);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform: rotate(2deg);
+}
+
+@media (min-width: 768px) {
+  .hero__avatar-wrapper {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+.hero__avatar-placeholder {
+  font-size: 100px;
+  color: var(--brand);
+  line-height: 1;
+  user-select: none;
+}
+
+.hero__doodle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero__doodle--star {
+  top: -20px;
+  right: -20px;
+  width: 48px;
+  height: 48px;
+  transform: rotate(-15deg);
+}
+
+.hero__doodle--arrow {
+  bottom: -10px;
+  left: -30px;
+  width: 64px;
+  height: 64px;
+  transform: rotate(10deg);
+}
+
+.hero__doodle--dots {
+  top: 30%;
+  right: -40px;
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 767px) {
+  .hero__doodle { display: none; }
+}
+
+/* ---- About ---- */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 3px solid var(--border);
+  border-radius: var(--radius-default);
+  background: var(--bg);
+  box-shadow: var(--shadow-xs);
+  transition: all 0.2s cubic-bezier(.25,.46,.45,.94);
+}
+.stat-item:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translate(-1px,-1px);
+}
+
+.stat-item__num {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-heading);
+  line-height: 1;
+}
+
+.stat-item__label {
+  font-size: 16px;
+  color: var(--text-body);
+}
+
+/* ---- Projects ---- */
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 640px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background: var(--neutral-primary-soft);
+  border: 3px solid var(--border);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  transition: all 0.2s cubic-bezier(.25,.46,.45,.94);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:nth-child(2n) {
+  border-radius: var(--radius-default);
+}
+
+.card:nth-child(3n) {
+  border-radius: var(--radius-sm);
+}
+
+.card:hover {
+  background: var(--neutral-secondary-soft);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px) rotate(1.5deg);
+}
+
+.card:active {
+  box-shadow: var(--shadow-xs);
+  transform: translateY(0) rotate(0);
+}
+
+.card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  border: 3px solid var(--border);
+  background: var(--brand-softer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 22px;
+  color: var(--fg-brand-strong);
+  transform: rotate(-3deg);
+}
+
+.card:nth-child(2n) .card__icon { transform: rotate(2deg); background: var(--neutral-secondary-soft); }
+.card:nth-child(3n) .card__icon { transform: rotate(-1deg); background: var(--brand-softer); }
+
+.card__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 8px;
+}
+
+.card__desc {
+  font-size: 16px;
+  color: var(--text-body);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border: 3px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text-heading);
+  line-height: 1;
+}
+
+.tag:nth-child(2n) { border-radius: var(--radius-default); }
+.tag:nth-child(3n) { border-radius: var(--radius-base); }
+
+.card__link {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--fg-brand-strong);
+  text-decoration: underline;
+}
+.card__link:hover { text-decoration: none; }
+.card__link svg { width: 14px; height: 14px; }
+
+/* ---- Skills ---- */
+.skills__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font);
+  border: 3px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--neutral-primary-soft);
+  box-shadow: var(--shadow-xs);
+  color: var(--text-heading);
+  transition: all 0.2s cubic-bezier(.25,.46,.45,.94);
+  cursor: default;
+}
+
+.skill-badge:nth-child(3n+1) { border-radius: var(--radius-base); }
+.skill-badge:nth-child(3n+2) { border-radius: var(--radius-default); }
+.skill-badge:nth-child(3n) { border-radius: var(--radius-sm); }
+
+.skill-badge:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translate(-1px,-1px) rotate(-1deg);
+  background: var(--neutral-secondary-soft);
+}
+
+.skill-badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.skills__category {
+  margin-bottom: 40px;
+}
+
+.skills__category:last-child { margin-bottom: 0; }
+
+.skills__category-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 16px;
+}
+
+/* ---- Contact / CTA ---- */
+.contact {
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 16px;
+}
+
+.contact .btn {
+  margin-top: 8px;
+}
+
+/* ---- Footer ---- */
+.footer {
+  padding: 32px 0;
+  border-top: 3px solid var(--border);
+  background: var(--bg);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer__copy {
+  font-size: 14px;
+  color: var(--text-body);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-heading);
+  text-decoration: none;
+  box-shadow: var(--shadow-xs);
+  transition: all 0.2s cubic-bezier(.25,.46,.45,.94);
+}
+.footer__socials a:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translate(-2px,-2px) rotate(-3deg);
+  text-decoration: none;
+  background: var(--neutral-secondary-soft);
+}
+.footer__socials a:nth-child(2n):hover { transform: translate(-2px,-2px) rotate(2deg); }
+
+.footer__socials svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---- SVG Doodle Decor ---- */
+.doodle-divider {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  position: relative;
+  z-index: 2;
+}
+.doodle-divider svg {
+  width: 120px;
+  height: 24px;
+}
+
+/* ---- Animations ---- */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(var(--rot, 2deg)); }
+  50% { transform: translateY(-8px) rotate(var(--rot, 2deg)); }
+}
+
+@keyframes doodle-pop {
+  0% { opacity: 0; transform: scale(0.8) rotate(5deg); }
+  60% { transform: scale(1.05) rotate(-2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+.anim-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.anim-pop {
+  animation: doodle-pop 0.5s cubic-bezier(.25,.46,.45,.94) forwards;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(.25,.46,.45,.94);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Wavy divider ---- */
+.wavy-divider {
+  width: 100%;
+  height: 60px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 639px) {
+  .nav__links a:not(.nav__mail) { display: none; }
+  .hero { padding: 48px 0 48px; }
+  section { padding: 48px 0; }
+  .container { padding: 0 20px; }
+}
+</style>
 </head>
 <body>
 
-<!-- MAIN -->
-<main id="wrapper" class="wrapper">
-
-    <div class="content">
-
-        <!-- HEADER -->
-        <header class="header" id="header">
-            <div class="container">
-
-                <nav id="nav" class="wow fadeIn">
-                    <span class="logo"></span>
-
-                    <div class="nav__ul">
-                        <a class="mailto" href="mailto:ashot.svazyan@yandex.ru">ashot.svazyan@yandex.ru</a>
-                    </div>
-                </nav>
-
-                <div class="hero__wrapper">
-                    <div class="hero__left wow fadeIn" data-wow-delay="200ms" data-speed="1.1">
-                        <div class="name__wrapper">
-                            <span class="name__line"></span>
-                            <span class="name__text">Hi, I'm Ashot Svazyan.</span>
-                        </div>
-                        <h1 class="header__h1">I'm a <m>creative </m> <br /> fullstack developer</h1>
-                        <a target="_blank" href="https://github.com/TheWitcher1991" class="header__exp">
-                            <i class="fa-brands fa-github"></i>
-                            TheWitcher1991
-                        </a>
-                    </div>
-                    <div class="hero__right wow fadeIn" data-wow-delay="400ms">
-                        <img data-speed=".8" src="./static/img/hero.png" alt="hero" />
-                    </div>
-                    <div class="header__light wow fadeIn" data-wow-delay="600ms" data-speed="1.1">
-                        <span class="light__text">I have created a large number of software products</span>
-                        <span class="light__exp">Programming is my passion</span>
-                    </div>
-                </div>
-
-            </div>
-        </header>
-
-        <!-- MAIN CONTENT -->
-        <div class="context" id="context">
-
-            <div id="project" class="project">
-                <div class="container">
-                    <h2 class="section__title wow fadeIn" data-wow-delay="400ms" data-speed="1.1">Projects developed from scratch</h2>
-                    <div class="project__wrap">
-
-                    </div>
-                </div>
-            </div>
-
-            <div id="skills" class="skills">
-                <div class="container">
-                    <h2 class="section__title wow fadeIn" data-wow-delay="400ms">My stack</h2>
-                    <div class="skills__wrap  wow fadeInUp">
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- FOOTER -->
-        <footer class="footer" id="footer">
-
-            <div class="footer__info wow fadeIn">
-                <img class="footer__sphere" src="./static/img/more/sphere.png" alt="">
-                <div class="container">
-                    <span>Interested?</span>
-                    <p>Let's talk</p>
-                    <a href="mailto:ashot.svazyan@yandex.ru">Contact <img src="./static/img/back.png" alt=""></a>
-                </div>
-                <img class="footer__matrix" src="./static/img/more/matrix.png" alt="">
-                <img class="footer__light" src="./static/img/more/light-footer.png" alt="">
-            </div>
-
-            <div class="footer__contact wow fadeIn">
-                <div class="container">
-                    <span><i class="fa-light fa-copyright"></i> 2026 All rights Reserved</span>
-                    <span>ashot.svazyan@yandex.ru</span>
-                </div>
-            </div>
-
-        </footer>
-
+<!-- Nav -->
+<nav class="container" style="position:relative;z-index:10;">
+  <div class="nav">
+    <a href="#" class="logo">AS</a>
+    <div class="nav__links">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav__mail">ashot.svazyan@yandex.ru</a>
     </div>
+  </div>
+</nav>
 
-</main>
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__content reveal">
+        <div class="hero__greeting">
+          <span class="hero__greeting-line"></span>
+          Hi, I'm Ashot Svazyan
+        </div>
+        <h1>I'm a <em>creative</em><br/>fullstack engineer</h1>
+        <p class="hero__desc">I build software products from scratch — from idea to release. My code is my signature.</p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--brand">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            Projects
+          </a>
+          <a href="https://github.com/TheWitcher1991" target="_blank" class="btn btn--ghost">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero__visual reveal">
+        <div class="hero__avatar-wrapper anim-float" style="--rot: 2deg;">
+          <div class="hero__avatar-placeholder">✦</div>
+        </div>
+        <svg class="hero__doodle hero__doodle--star" viewBox="0 0 48 48" fill="none"><path d="M24 0l3.5 10.5L38 7l-6.5 9.5L48 24l-16.5 7.5L38 41l-10.5-3.5L24 48l-3.5-10.5L10 41l6.5-9.5L0 24l16.5-7.5L10 7l10.5 3.5L24 0z" fill="var(--fg-brand-strong)" opacity="0.4"/></svg>
+        <svg class="hero__doodle hero__doodle--arrow" viewBox="0 0 64 64" fill="none"><path d="M2 56c14-6 30-14 42-22l6-4" stroke="var(--border)" stroke-width="3" stroke-linecap="round"/><path d="M44 22l12 10 6-16-18 6z" fill="var(--brand)" stroke="var(--border)" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        <svg class="hero__doodle hero__doodle--dots" viewBox="0 0 32 32" fill="var(--text-body)" opacity="0.3"><circle cx="4" cy="4" r="2"/><circle cx="16" cy="4" r="2"/><circle cx="28" cy="4" r="2"/><circle cx="4" cy="16" r="2"/><circle cx="16" cy="16" r="2"/><circle cx="28" cy="16" r="2"/><circle cx="4" cy="28" r="2"/><circle cx="16" cy="28" r="2"/><circle cx="28" cy="28" r="2"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- SCRIPTS -->
-<script src="./static/libs/gsap/gsap.min.js"></script>
-<script src="./static/libs/gsap/ScrollTrigger.min.js"></script>
-<script src="./static/libs/gsap/ScrollSmoother.min.js"></script>
+<!-- Wavy Divider -->
+<div class="wavy-divider" style="margin-top:-32px;" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="width:100%;height:100%;display:block;">
+    <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1350,15 1440,30 L1440,60 L0,60 Z" fill="var(--bg-alt)" opacity="0.5"/>
+  </svg>
+</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- About -->
+<section>
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">About Me</span>
+      <h2>Turning ideas into&nbsp;working code</h2>
+      <p>I've been doing fullstack engineering for over 5 years. I specialize in building complex web applications — from a well-architected backend to a lively, responsive interface.</p>
+    </div>
+    <div class="about__grid reveal">
+      <div class="about__stat">
+        <div class="stat-item">
+          <span class="stat-item__num">5+</span>
+          <span class="stat-item__label">years of commercial development</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-item__num">20+</span>
+          <span class="stat-item__label">shipped projects</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:18px;">My stack is constantly growing, but it's built on proven technologies. I believe in clean code, thoughtful architecture, and interfaces that bring joy.</p>
+        <p style="font-size:18px;">Open to collaboration and interesting new projects.</p>
+        <p style="font-size:18px;">I've worked across HR-tech, Ed-tech, Health-tech, Wealth-tech, and Agri-tech — building products that make a real impact.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<script>new WOW().init()</script>
+<!-- Wavy Divider -->
+<div class="wavy-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="width:100%;height:100%;display:block;">
+    <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1350,45 1440,30 L1440,0 L0,0 Z" fill="var(--bg)" opacity="0.5"/>
+  </svg>
+</div>
 
-<script src="./static/scripts/index.js"></script>
-<script src="./static/scripts/gsap.js"></script>
+<!-- Projects -->
+<section id="projects">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Portfolio</span>
+      <h2>Projects built from scratch</h2>
+      <p>Every project is a unique story — from the first line of code to the release.</p>
+    </div>
+    <div class="projects__grid">
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="card__title">TalentSpot</h3>
+        <p class="card__desc">HR-Tech &amp; Ed-Tech platform for talent discovery and development.</p>
+        <div class="card__tags">
+          <span class="tag">React</span>
+          <span class="tag">Django</span>
+        </div>
+        <a href="https://talentspot.ru" target="_blank" class="card__link">
+          talentspot.ru
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <h3 class="card__title">Startup Center StGAU</h3>
+        <p class="card__desc">Ed-Tech project. University startup center platform.</p>
+        <div class="card__tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">Nest JS</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5a5 5 0 0 0 7 7"/></svg>
+        </div>
+        <h3 class="card__title">PAPS</h3>
+        <p class="card__desc">AI &amp; AgriTech project. Smart agriculture solutions powered by AI.</p>
+        <div class="card__tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">Django</span>
+          <span class="tag">PyTorch</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 class="card__title">HeyHey</h3>
+        <p class="card__desc">HealthTech project. A platform for health and wellness.</p>
+        <div class="card__tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">Django</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><polygon points="11 5 6 9 2 8 14 2 18 6 16 10 9 18 10 22 8 16 5 19"/></svg>
+        </div>
+        <h3 class="card__title">HeyHey Telegram App</h3>
+        <p class="card__desc">HealthTech Telegram Mini App. Health care right in your messenger.</p>
+        <div class="card__tags">
+          <span class="tag">React</span>
+          <span class="tag">Django</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3 class="card__title">Prostoprobuy</h3>
+        <p class="card__desc">Web-tech project. A service for convenient online shopping.</p>
+        <div class="card__tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">Django</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3 class="card__title">Prostoprobuy Telegram App</h3>
+        <p class="card__desc">Telegram Mini App for online shopping right in the messenger.</p>
+        <div class="card__tags">
+          <span class="tag">React</span>
+          <span class="tag">Django</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3 class="card__title">Stroy</h3>
+        <p class="card__desc">ECM system. Electronic document management for the construction industry.</p>
+        <div class="card__tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">Django</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991/stroy" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="card__title">Sandbox FGIS</h3>
+        <p class="card__desc">FGIS sandbox. Emulation environment for integration testing.</p>
+        <div class="card__tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">FastAPI</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991/sandbox-fgis" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 class="card__title">DoctorFit</h3>
+        <p class="card__desc">Plant disease detection from photos using AI.</p>
+        <div class="card__tags">
+          <span class="tag">Flutter</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">FastAPI</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991/doctor-fit" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="card__title">MyFarm</h3>
+        <p class="card__desc">Livestock optimization. Digital solution for farming operations.</p>
+        <div class="card__tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">Django</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991/my-farm" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+        </div>
+        <h3 class="card__title">DevOops Manager</h3>
+        <p class="card__desc">Event platform. A platform for managing conferences and meetups.</p>
+        <div class="card__tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">ASP.NET Core</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991/dev-oops-manager" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h3 class="card__title">Online Library</h3>
+        <p class="card__desc">Web-tech project. Digital library with catalog and search system.</p>
+        <div class="card__tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">ASP.NET Core</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991/fullstack-nextjs-asp-net-core" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3 class="card__title">Lister</h3>
+        <p class="card__desc">Desktop file manager built with Electron.</p>
+        <div class="card__tags">
+          <span class="tag">Electron</span>
+          <span class="tag">Node.js</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991/file-manager-nodejs" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><polyline points="21 15 15 9 21 9"/><path d="M21 9v6"/><path d="M3 9h6l3 3-3 3H3"/></svg>
+        </div>
+        <h3 class="card__title">REENSQ</h3>
+        <p class="card__desc">Forum project. Classic web community for discussions.</p>
+        <div class="card__tags">
+          <span class="tag">PHP</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991/REENSQ" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3 class="card__title">StgauJob</h3>
+        <p class="card__desc">HR-Tech project. Job platform for students and graduates.</p>
+        <div class="card__tags">
+          <span class="tag">PHP</span>
+        </div>
+        <a href="https://job.stgau.ru" target="_blank" class="card__link">
+          job.stgau.ru
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+      <div class="card reveal">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="card__title">StGAU.Navigator</h3>
+        <p class="card__desc">University campus navigator mobile app.</p>
+        <div class="card__tags">
+          <span class="tag">React Native</span>
+        </div>
+        <a href="https://github.com/TheWitcher1991/stgau.navigator" target="_blank" class="card__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wavy Divider -->
+<div class="wavy-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="width:100%;height:100%;display:block;">
+    <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1350,15 1440,30 L1440,60 L0,60 Z" fill="var(--bg-alt)" opacity="0.5"/>
+  </svg>
+</div>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Competencies</span>
+      <h2>My tech stack</h2>
+      <p>Tools I use professionally.</p>
+    </div>
+    <div class="reveal">
+      <div class="skills__category">
+        <h3 class="skills__category-title">Frontend</h3>
+        <div class="skills__grid">
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#61DAFB;"></span> React</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#3178C6;"></span> TypeScript</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#000000;"></span> Next.js</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#4FC08D;"></span> Vue.js</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#F7DF1E;"></span> JavaScript</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#06B6D4;"></span> Tailwind CSS</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#FF4154;"></span> React Native</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#02569B;"></span> Flutter</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#E34F26;"></span> HTML &amp; CSS</span>
+        </div>
+      </div>
+      <div class="skills__category">
+        <h3 class="skills__category-title">Backend</h3>
+        <div class="skills__grid">
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#339933;"></span> Node.js</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#306998;"></span> Python</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#092E20;"></span> Django</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#000000;"></span> FastAPI</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#239120;"></span> C#</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#E0234E;"></span> Nest JS</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#512BD4;"></span> ASP.NET Core</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#777BB4;"></span> PHP</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#00599C;"></span> C++</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#336791;"></span> PostgreSQL</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#4479A1;"></span> MySQL</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#E48E00;"></span> SQL</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#47A248;"></span> MongoDB</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#DC382D;"></span> Redis</span>
+        </div>
+      </div>
+      <div class="skills__category">
+        <h3 class="skills__category-title">DevOps & Tools</h3>
+        <div class="skills__grid">
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#2496ED;"></span> Docker</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#326CE5;"></span> Kubernetes</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#F05032;"></span> Git</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#181717;"></span> GitHub Actions</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#FF6600;"></span> Nginx</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#FF6600;"></span> RabbitMQ</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#0DB7ED;"></span> WebSocket</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#47848F;"></span> Electron</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#EE4C2C;"></span> PyTorch</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#412991;"></span> LLM</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#FF6F00;"></span> CNN / Deep Learning</span>
+        </div>
+      </div>
+      <div class="skills__category">
+        <h3 class="skills__category-title">Management & Methodologies</h3>
+        <div class="skills__grid">
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#0052CC;"></span> Jira</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#6DB33F;"></span> Scrum</span>
+          <span class="skill-badge"><span class="skill-badge__dot" style="background:#0098D4;"></span> Agile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wavy Divider -->
+<div class="wavy-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="width:100%;height:100%;display:block;">
+    <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1350,45 1440,30 L1440,0 L0,0 Z" fill="var(--bg)" opacity="0.5"/>
+  </svg>
+</div>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="contact reveal">
+      <span class="section__label">Contact</span>
+      <h2>Interested?</h2>
+      <p style="max-width:500px;margin:0 auto 24px;font-size:20px;">
+        Let's talk about your project. I'm always open to new ideas and collaboration.
+      </p>
+      <a href="mailto:ashot.svazyan@yandex.ru" class="btn btn--brand">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email me
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <span class="footer__copy">© 2026 Ashot Svazyan. All rights reserved.</span>
+      <div class="footer__socials">
+        <a href="https://github.com/TheWitcher1991" target="_blank" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="mailto:ashot.svazyan@yandex.ru" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const revealEls = document.querySelectorAll('.reveal');
+
+  function checkReveal() {
+    revealEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight - 60;
+      if (isVisible) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkReveal, { passive: true });
+  checkReveal();
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
