@@ -40,8 +40,8 @@
             path: './static/img/project/learn-mockup.png',
             pos: 'right',
             link: {
-                type: 'github',
-                url: 'https://github.com/TheWitcher1991'
+                type: 'link',
+                url: 'https://tk.stgau.ru'
             }
         },
         {
