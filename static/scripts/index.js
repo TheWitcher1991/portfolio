@@ -196,6 +196,35 @@
         },
     ]
 
+    const LANDINGS = [
+        {name: 'EcoLyra', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'NextVita', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'ApiVet', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'BeeProtein', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'VitroBerry', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'UMP', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'Pvo26', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'Sandbox FGIS', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'Refract AI', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'DoctorFit', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'RootBerry', path: './static/img/landing/placeholder.svg', url: '#'},
+        {name: 'PAMP', path: './static/img/landing/placeholder.svg', url: '#'},
+    ]
+
+    const LIBRARIES = [
+        {name: 'modelstack', desc: 'It is a type-safe toolkit for working with entities at the frontend application level', url: '#'},
+        {name: 'crono', desc: 'Interactive cron schedule builder', url: '#'},
+        {name: 'craq', desc: 'Типобезопасные React Query хуки + Repository паттерн для CRUD на axios', url: '#'},
+        {name: 'max-apps.js', desc: 'TypeScript библиотеки для разработки Mini Apps на платформе MAX', url: '#'},
+        {name: 'clean-django', desc: 'Django clean architecture toolkit', url: '#'},
+        {name: 't-kassa-widget', desc: 'React component for using t-kassa sdk', url: '#'},
+        {name: 'use-yandex-cloud-video', desc: 'React hook for using yandex cloud video sdk', url: '#'},
+        {name: 'redis-task-queue', desc: 'Distributed task queue on С++', url: '#'},
+        {name: 'gross-js', desc: 'This is a plugin that speeds up work with some code. He is very similar to jQuery', url: '#'},
+        {name: 'arise-js', desc: 'This is a plugin for creating various (customizable) pop-ups that can be added to a website or web application', url: '#'},
+        {name: 'HTMLREditor', desc: 'WYSIWYG editor for creating comments and primitive web pages', url: '#'},
+    ]
+
     document.addEventListener('DOMContentLoaded', function () {
 
         document.querySelectorAll('a[href^="#"]').forEach(el => {
@@ -210,6 +239,8 @@
             })
         })
 
+        const projectWrap = document.querySelector('.project__wrap')
+        if (projectWrap) {
         PROJECTS.forEach(({name, desc, link, path, pos}) => {
             const pathCtx = `<img src="${path}" alt="html" />`
             const itemClass = pos === 'left' ? 'project__left' : 'project__right'
@@ -232,7 +263,10 @@
             `
 
         })
+        }
 
+        const skillsWrap = document.querySelector('.skills__wrap')
+        if (skillsWrap) {
         SKILLS.forEach(({path, name}) => {
             const pathCtx = Array.isArray(path) ? path.map(el => `<img src="${el}" alt="html" />`) : `<img src="${path}" alt="html" />`
 
@@ -243,6 +277,60 @@
                 </div>
             `
 
+        })
+        }
+
+        document.querySelectorAll('.tab__btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab__btn').forEach(b => {
+                    b.classList.remove('is-active')
+                    b.setAttribute('aria-selected', 'false')
+                })
+                btn.classList.add('is-active')
+                btn.setAttribute('aria-selected', 'true')
+
+                document.querySelectorAll('.tab__panel').forEach(panel => {
+                    panel.classList.toggle('is-active', panel.id === 'tab-' + btn.dataset.tab)
+                })
+            })
+        })
+
+        LANDINGS.forEach(({name, path, url}) => {
+            const wrap = document.querySelector('.landings__list')
+            if (!wrap) return
+
+            wrap.innerHTML += `
+                <a class="landing-card" href="${url}" target="_blank">
+                    <div class="landing-card__media">
+                        <img src="${path}" alt="${name}" loading="lazy" />
+                    </div>
+                    <div class="landing-card__body">
+                        <h3 class="landing-card__title">${name}</h3>
+                        <span class="landing-card__link">
+                            View design
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </span>
+                    </div>
+                </a>
+            `
+        })
+
+        LIBRARIES.forEach(({name, desc, url}) => {
+            const wrap = document.querySelector('.libraries__list')
+            if (!wrap) return
+
+            wrap.innerHTML += `
+                <div class="lib-card">
+                    <div class="lib-card__body">
+                        <h3 class="lib-card__title">${name}</h3>
+                        <p class="lib-card__desc">${desc}</p>
+                    </div>
+                    <a class="lib-card__link" href="${url}" target="_blank">
+                        GitHub
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+            `
         })
 
     })

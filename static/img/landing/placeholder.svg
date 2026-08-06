@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 110" role="img" aria-label="Placeholder">
+  <rect width="160" height="110" fill="#EFEBE1"/>
+  <rect x="1" y="1" width="158" height="108" fill="none" stroke="#111827" stroke-width="2"/>
+  <rect x="14" y="18" width="132" height="10" rx="5" fill="#EACDC2"/>
+  <rect x="14" y="40" width="88" height="8" rx="4" fill="#D9D2C4"/>
+  <rect x="14" y="56" width="100" height="8" rx="4" fill="#D9D2C4"/>
+  <rect x="14" y="72" width="70" height="8" rx="4" fill="#D9D2C4"/>
+  <text x="80" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">Landing preview</text>
+</svg>
