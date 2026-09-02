@@ -214,8 +214,8 @@
     const LIBRARIES = [
         {name: 'modelstack', desc: 'It is a type-safe toolkit for working with entities at the frontend application level', url: '#'},
         {name: 'crono', desc: 'Interactive cron schedule builder', url: '#'},
-        {name: 'craq', desc: 'Типобезопасные React Query хуки + Repository паттерн для CRUD на axios', url: '#'},
-        {name: 'max-apps.js', desc: 'TypeScript библиотеки для разработки Mini Apps на платформе MAX', url: '#'},
+        {name: 'craq', desc: 'Type-safe React Query hooks + repository pattern for Axios-based CRUD', url: '#'},
+        {name: 'max-apps.js', desc: 'TypeScript libraries for developing Mini Apps on the MAX platform', url: '#'},
         {name: 'clean-django', desc: 'Django clean architecture toolkit', url: '#'},
         {name: 't-kassa-widget', desc: 'React component for using t-kassa sdk', url: '#'},
         {name: 'use-yandex-cloud-video', desc: 'React hook for using yandex cloud video sdk', url: '#'},
