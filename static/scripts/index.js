@@ -1,26 +1,26 @@
 (function () {
 
     const SKILLS = [
-        {path: './static/img/skills/react.png', name: 'React JS'},
-        {path: './static/img/skills/next.png', name: 'Next JS'},
-        {path: './static/img/skills/dj.png', name: 'Django'},
-        {path: './static/img/skills/asp.png', name: 'ASP.NET Core'},
-        {path: './static/img/skills/nest.png', name: 'Nest JS'},
-        {path: './static/img/skills/fastapi.svg', name: 'FastAPI'},
-        {path: './static/img/skills/node.png', name: 'Node JS'},
-        {path: ['./static/img/skills/html.png', './static/img/skills/css.png'], name: 'HTML & CSS'},
-        {path: './static/img/skills/js.png', name: 'JavaScript'},
-        {path: './static/img/skills/ts.png', name: 'TypeScript'},
-        {path: './static/img/skills/python.png', name: 'Python'},
-        {path: './static/img/skills/c.png', name: 'C++'},
-        {path: './static/img/skills/php.png', name: 'PHP'},
-        {path: './static/img/skills/sql.png', name: 'SQL'},
-        {path: './static/img/skills/mysql.png', name: 'MySQL'},
-        {path: './static/img/skills/postgresql.png', name: 'PostgreSQL'},
-        {path: './static/img/skills/redis.png', name: 'Redis'},
-        {path: './static/img/skills/rabbit.png', name: 'RabbitMQ'},
-        {path: './static/img/skills/docker.webp', name: 'Docker'},
-        {path: './static/img/skills/nginx.webp', name: 'Nginx'},
+        { path: './static/img/skills/react.png', name: 'React JS' },
+        { path: './static/img/skills/next.png', name: 'Next JS' },
+        { path: './static/img/skills/dj.png', name: 'Django' },
+        { path: './static/img/skills/asp.png', name: 'ASP.NET Core' },
+        { path: './static/img/skills/nest.png', name: 'Nest JS' },
+        { path: './static/img/skills/fastapi.svg', name: 'FastAPI' },
+        { path: './static/img/skills/node.png', name: 'Node JS' },
+        { path: ['./static/img/skills/html.png', './static/img/skills/css.png'], name: 'HTML & CSS' },
+        { path: './static/img/skills/js.png', name: 'JavaScript' },
+        { path: './static/img/skills/ts.png', name: 'TypeScript' },
+        { path: './static/img/skills/python.png', name: 'Python' },
+        { path: './static/img/skills/c.png', name: 'C++' },
+        { path: './static/img/skills/php.png', name: 'PHP' },
+        { path: './static/img/skills/sql.png', name: 'SQL' },
+        { path: './static/img/skills/mysql.png', name: 'MySQL' },
+        { path: './static/img/skills/postgresql.png', name: 'PostgreSQL' },
+        { path: './static/img/skills/redis.png', name: 'Redis' },
+        { path: './static/img/skills/rabbit.png', name: 'RabbitMQ' },
+        { path: './static/img/skills/docker.webp', name: 'Docker' },
+        { path: './static/img/skills/nginx.webp', name: 'Nginx' },
     ]
 
     const PROJECTS = [
@@ -197,32 +197,33 @@
     ]
 
     const LANDINGS = [
-        {name: 'EcoLyra', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'NextVita', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'ApiVet', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'BeeProtein', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'VitroBerry', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'UMP', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'Pvo26', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'Sandbox FGIS', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'Refract AI', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'DoctorFit', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'RootBerry', path: './static/img/landing/placeholder.svg', url: '#'},
-        {name: 'PAMP', path: './static/img/landing/placeholder.svg', url: '#'},
+        { name: 'EcoLyra', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'NextVita', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'ApiVet', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'BeeProtein', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'VitroBerry', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'UMP', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'Pvo26', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'Sandbox FGIS', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'Refract AI', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'DoctorFit', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'RootBerry', path: './static/img/landing/placeholder.svg', url: '#' },
+        { name: 'PAMP', path: './static/img/landing/placeholder.svg', url: '#' },
     ]
 
     const LIBRARIES = [
-        {name: 'modelstack', desc: 'It is a type-safe toolkit for working with entities at the frontend application level', url: '#'},
-        {name: 'crono', desc: 'Interactive cron schedule builder', url: '#'},
-        {name: 'craq', desc: 'Type-safe React Query hooks + repository pattern for Axios-based CRUD', url: '#'},
-        {name: 'max-apps.js', desc: 'TypeScript libraries for developing Mini Apps on the MAX platform', url: '#'},
-        {name: 'clean-django', desc: 'Django clean architecture toolkit', url: '#'},
-        {name: 't-kassa-widget', desc: 'React component for using t-kassa sdk', url: '#'},
-        {name: 'use-yandex-cloud-video', desc: 'React hook for using yandex cloud video sdk', url: '#'},
-        {name: 'redis-task-queue', desc: 'Distributed task queue on С++', url: '#'},
-        {name: 'gross-js', desc: 'This is a plugin that speeds up work with some code. He is very similar to jQuery', url: '#'},
-        {name: 'arise-js', desc: 'This is a plugin for creating various (customizable) pop-ups that can be added to a website or web application', url: '#'},
-        {name: 'HTMLREditor', desc: 'WYSIWYG editor for creating comments and primitive web pages', url: '#'},
+        { name: 'cvatkit', desc: 'Framework-agnostic Python library for integrating with CVAT', url: '#' },
+        { name: 'modelstack', desc: 'It is a type-safe toolkit for working with entities at the frontend application level', url: '#' },
+        { name: 'crono', desc: 'Interactive cron schedule builder', url: '#' },
+        { name: 'craq', desc: 'Type-safe React Query hooks + repository pattern for Axios-based CRUD', url: '#' },
+        { name: 'max-apps.js', desc: 'TypeScript libraries for developing Mini Apps on the MAX platform', url: '#' },
+        { name: 'clean-django', desc: 'Django clean architecture toolkit', url: '#' },
+        { name: 't-kassa-widget', desc: 'React component for using t-kassa sdk', url: '#' },
+        { name: 'use-yandex-cloud-video', desc: 'React hook for using yandex cloud video sdk', url: '#' },
+        { name: 'redis-task-queue', desc: 'Distributed task queue on С++', url: '#' },
+        { name: 'gross-js', desc: 'This is a plugin that speeds up work with some code. He is very similar to jQuery', url: '#' },
+        { name: 'arise-js', desc: 'This is a plugin for creating various (customizable) pop-ups that can be added to a website or web application', url: '#' },
+        { name: 'HTMLREditor', desc: 'WYSIWYG editor for creating comments and primitive web pages', url: '#' },
     ]
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -241,12 +242,12 @@
 
         const projectWrap = document.querySelector('.project__wrap')
         if (projectWrap) {
-        PROJECTS.forEach(({name, desc, link, path, pos}) => {
-            const pathCtx = `<img src="${path}" alt="html" />`
-            const itemClass = pos === 'left' ? 'project__left' : 'project__right'
-            const fadeClass = pos === 'left' ? 'fadeInLeft' : 'fadeInRight'
+            PROJECTS.forEach(({ name, desc, link, path, pos }) => {
+                const pathCtx = `<img src="${path}" alt="html" />`
+                const itemClass = pos === 'left' ? 'project__left' : 'project__right'
+                const fadeClass = pos === 'left' ? 'fadeInLeft' : 'fadeInRight'
 
-            document.querySelector('.project__wrap').innerHTML += `
+                document.querySelector('.project__wrap').innerHTML += `
                 <div class="project__item ${itemClass} wow ${fadeClass}">
                     ${pos === 'left' ? pathCtx : ''}
                     <div class="project__text" data-speed="1.1">
@@ -262,22 +263,22 @@
                 </div>
             `
 
-        })
+            })
         }
 
         const skillsWrap = document.querySelector('.skills__wrap')
         if (skillsWrap) {
-        SKILLS.forEach(({path, name}) => {
-            const pathCtx = Array.isArray(path) ? path.map(el => `<img src="${el}" alt="html" />`) : `<img src="${path}" alt="html" />`
+            SKILLS.forEach(({ path, name }) => {
+                const pathCtx = Array.isArray(path) ? path.map(el => `<img src="${el}" alt="html" />`) : `<img src="${path}" alt="html" />`
 
-            document.querySelector('.skills__wrap').innerHTML += `
+                document.querySelector('.skills__wrap').innerHTML += `
                 <div class="skills__item">
                     <span class="skills__img">${Array.isArray(path) ? pathCtx.join(' ') : pathCtx}</span>
                     <p class="skills__name">${name}</p>
                 </div>
             `
 
-        })
+            })
         }
 
         document.querySelectorAll('.tab__btn').forEach(btn => {
@@ -295,7 +296,7 @@
             })
         })
 
-        LANDINGS.forEach(({name, path, url}) => {
+        LANDINGS.forEach(({ name, path, url }) => {
             const wrap = document.querySelector('.landings__list')
             if (!wrap) return
 
@@ -315,7 +316,7 @@
             `
         })
 
-        LIBRARIES.forEach(({name, desc, url}) => {
+        LIBRARIES.forEach(({ name, desc, url }) => {
             const wrap = document.querySelector('.libraries__list')
             if (!wrap) return
 
