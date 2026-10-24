@@ -540,6 +540,20 @@
       overflow: hidden;
     }
 
+    .card--featured {
+      background: var(--brand-softer);
+      border-color: var(--fg-brand-strong);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card--featured:hover {
+      background: var(--brand-soft);
+    }
+
+    .card--featured .card__media {
+      border-color: var(--fg-brand-strong);
+    }
+
     .card:nth-child(2n) {
       border-radius: var(--radius-default);
     }
@@ -1176,7 +1190,7 @@
             Hi, I'm Ashot Svazyan
           </div>
           <h1>I'm a <em>creative</em><br />fullstack engineer</h1>
-          <p class="hero__desc">I build software products from scratch — from idea to release. My code is my signature.
+          <p class="hero__desc">I turn product ideas into shipped web applications — from system design and APIs to the interface people use every day.
           </p>
           <div class="hero__actions">
             <a href="#projects" class="btn btn--brand">
@@ -1239,9 +1253,8 @@
     <div class="container">
       <div class="section__header reveal">
         <span class="section__label">About Me</span>
-        <h2>Turning ideas into&nbsp;working code</h2>
-        <p>I'm a fullstack engineer. I specialize in building complex web applications — from a
-          well-architected backend to a lively, responsive interface.</p>
+        <h2>Fullstack work from idea to&nbsp;production</h2>
+        <p>I'm a fullstack engineer who connects dependable APIs and data workflows with interfaces that are clear and easy to use.</p>
       </div>
       <div class="about__grid reveal">
         <div class="about__stat">
@@ -1255,11 +1268,9 @@
           </div>
         </div>
         <div>
-          <p style="font-size:18px;">My stack is constantly growing, but it's built on proven technologies. I believe in
-            clean code, thoughtful architecture, and interfaces that bring joy.</p>
-          <p style="font-size:18px;">Open to collaboration and interesting new projects.</p>
-          <p style="font-size:18px;">I've worked across HR-tech, Ed-tech, Health-tech, Wealth-tech, and Agri-tech —
-            building products that make a real impact.</p>
+          <p style="font-size:18px;">I work across product interfaces, backend architecture, integrations, and AI-assisted workflows. The goal is to make complex systems feel straightforward to use.</p>
+          <p style="font-size:18px;">Available for product work, internal tools, and systems that need a stronger technical foundation.</p>
+          <p style="font-size:18px;">My experience spans HR-tech, Ed-tech, Health-tech, Wealth-tech, and Agri-tech — from early prototypes to production services.</p>
         </div>
       </div>
     </div>
@@ -1278,7 +1289,7 @@
       <div class="section__header reveal">
         <span class="section__label">Portfolio</span>
         <h2>Projects built from scratch</h2>
-        <p>Every project is a unique story — from the first line of code to the release.</p>
+        <p>A selection of products across HR, education, health, agriculture, commerce, and internal operations.</p>
       </div>
       <div class="tabs" role="tablist" aria-label="Portfolio">
         <button class="tab__btn is-active" type="button" role="tab" data-tab="projects"
@@ -1299,7 +1310,7 @@
               </svg>
             </div>
             <h3 class="card__title">TalentSpot</h3>
-            <p class="card__desc">HR-Tech &amp; Ed-Tech platform for talent discovery and development.</p>
+            <p class="card__desc">Recruiting and learning platform that helps teams discover talent and gives candidates a path to professional growth.</p>
             <div class="card__tags">
               <span class="tag">React</span>
               <span class="tag">Django</span>
@@ -1326,7 +1337,7 @@
               </svg>
             </div>
             <h3 class="card__title">EntryPoint</h3>
-            <p class="card__desc">HR-Tech platform for real-world IT tasks and verified experience.</p>
+            <p class="card__desc">Turns practical IT tasks into verifiable experience for candidates and a clearer hiring signal for teams.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">FastAPI</span>
@@ -1354,7 +1365,7 @@
               </svg>
             </div>
             <h3 class="card__title">Startup Center StGAU</h3>
-            <p class="card__desc">Ed-Tech project. University startup center platform.</p>
+            <p class="card__desc">University platform for publishing startup initiatives, supporting student teams, and coordinating project work.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">Nest JS</span>
@@ -1382,7 +1393,7 @@
               </svg>
             </div>
             <h3 class="card__title">Project Space StGAU</h3>
-            <p class="card__desc">Project Management platform. University project management and team collaboration system.</p>
+            <p class="card__desc">Shared workspace for university teams to organize initiatives, coordinate contributors, and track project progress.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">Nest JS</span>
@@ -1409,7 +1420,7 @@
               </svg>
             </div>
             <h3 class="card__title">PAPS</h3>
-            <p class="card__desc">AI &amp; AgriTech project. Smart agriculture solutions powered by AI.</p>
+            <p class="card__desc">AI-assisted agriculture product for analyzing plant conditions and supporting faster field decisions.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">Django</span>
@@ -1436,7 +1447,7 @@
               </svg>
             </div>
             <h3 class="card__title">HeyHey</h3>
-            <p class="card__desc">HealthTech project. A platform for health and wellness.</p>
+            <p class="card__desc">Health and wellness product that brings personal routines, recommendations, and progress into one service.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">Django</span>
@@ -1463,7 +1474,7 @@
               </svg>
             </div>
             <h3 class="card__title">HeyHey Telegram App</h3>
-            <p class="card__desc">HealthTech Telegram Mini App. Health care right in your messenger.</p>
+            <p class="card__desc">Telegram Mini App that gives users access to HeyHey health workflows without leaving the messenger.</p>
             <div class="card__tags">
               <span class="tag">React</span>
               <span class="tag">Django</span>
@@ -1491,7 +1502,7 @@
               </svg>
             </div>
             <h3 class="card__title">Prostoprobuy</h3>
-            <p class="card__desc">Web-tech project. A service for convenient online shopping.</p>
+            <p class="card__desc">Online shopping service focused on product discovery and a shorter path from catalog to purchase.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">Django</span>
@@ -1518,7 +1529,7 @@
               </svg>
             </div>
             <h3 class="card__title">Prostoprobuy Telegram App</h3>
-            <p class="card__desc">Telegram Mini App for online shopping right in the messenger.</p>
+            <p class="card__desc">Mini App for browsing products and shopping inside Telegram, with the flow adapted to a messenger interface.</p>
             <div class="card__tags">
               <span class="tag">React</span>
               <span class="tag">Django</span>
@@ -1546,7 +1557,7 @@
               </svg>
             </div>
             <h3 class="card__title">Stroy</h3>
-            <p class="card__desc">ECM system. Electronic document management for the construction industry.</p>
+            <p class="card__desc">Document management workspace for construction teams, replacing scattered files and approval threads with one process.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">Django</span>
@@ -1572,7 +1583,7 @@
               </svg>
             </div>
             <h3 class="card__title">Sandbox FGIS</h3>
-            <p class="card__desc">FGIS sandbox. Emulation environment for integration testing.</p>
+            <p class="card__desc">Local FGIS simulator for testing integrations and user flows before connecting to production services.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">FastAPI</span>
@@ -1599,7 +1610,7 @@
               </svg>
             </div>
             <h3 class="card__title">DoctorFit PWA</h3>
-            <p class="card__desc">Plant disease detection from photos using AI.</p>
+            <p class="card__desc">Cross-platform tool that analyzes plant photos and returns an AI-assisted disease assessment.</p>
             <div class="card__tags">
               <span class="tag">Flutter</span>
               <span class="tag">Next.js</span>
@@ -1631,7 +1642,7 @@
               </svg>
             </div>
             <h3 class="card__title">DoctorFit Web</h3>
-            <p class="card__desc">Web platform for healthcare workflows and doctor-patient interaction.</p>
+            <p class="card__desc">Web interface for reviewing plant diagnostics, organizing cases, and connecting AI analysis to the user workflow.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">FastAPI</span>
@@ -1658,7 +1669,7 @@
               </svg>
             </div>
             <h3 class="card__title">MyFarm</h3>
-            <p class="card__desc">Livestock optimization. Digital solution for farming operations.</p>
+            <p class="card__desc">Farm management platform for tracking livestock operations and making day-to-day decisions from one workspace.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">Django</span>
@@ -1689,7 +1700,7 @@
               </svg>
             </div>
             <h3 class="card__title">DevOops Manager</h3>
-            <p class="card__desc">Event platform. A platform for managing conferences and meetups.</p>
+            <p class="card__desc">Event management platform for planning conferences, coordinating speakers, and publishing event information.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">ASP.NET Core</span>
@@ -1716,7 +1727,7 @@
               </svg>
             </div>
             <h3 class="card__title">Online Library</h3>
-            <p class="card__desc">Web-tech project. Digital library with catalog and search system.</p>
+            <p class="card__desc">Searchable digital library with catalog browsing and structured information about books and collections.</p>
             <div class="card__tags">
               <span class="tag">Next.js</span>
               <span class="tag">ASP.NET Core</span>
@@ -1746,7 +1757,7 @@
               </svg>
             </div>
             <h3 class="card__title">Lister</h3>
-            <p class="card__desc">Desktop file manager built with Electron.</p>
+            <p class="card__desc">Lightweight desktop file manager for organizing local files through an Electron interface.</p>
             <div class="card__tags">
               <span class="tag">Electron</span>
               <span class="tag">Node.js</span>
@@ -1774,7 +1785,7 @@
               </svg>
             </div>
             <h3 class="card__title">REENSQ</h3>
-            <p class="card__desc">Forum project. Classic web community for discussions.</p>
+            <p class="card__desc">Forum for publishing topics, discussing ideas, and building a searchable archive of community conversations.</p>
             <div class="card__tags">
               <span class="tag">PHP</span>
             </div>
@@ -1800,7 +1811,7 @@
               </svg>
             </div>
             <h3 class="card__title">StgauJob</h3>
-            <p class="card__desc">HR-Tech project. Job platform for students and graduates.</p>
+            <p class="card__desc">Job board connecting students and graduates with internships and early-career opportunities.</p>
             <div class="card__tags">
               <span class="tag">PHP</span>
             </div>
@@ -1827,7 +1838,7 @@
               </svg>
             </div>
             <h3 class="card__title">StGAU.Navigator</h3>
-            <p class="card__desc">University campus navigator mobile app.</p>
+            <p class="card__desc">Mobile campus guide for finding university locations and navigating between them.</p>
             <div class="card__tags">
               <span class="tag">React Native</span>
             </div>
@@ -1866,9 +1877,9 @@
       <div class="section__header reveal">
         <span class="section__label">Competencies</span>
         <h2>My tech stack</h2>
-        <p>Tools I use professionally.</p>
+        <p>A practical stack for shipping interfaces, APIs, integrations, and AI-assisted workflows.</p>
       </div>
-      <div class="reveal">
+      <div class="skills__list reveal">
         <div class="skills__category">
           <h3 class="skills__category-title">Frontend</h3>
           <div class="skills__grid">
@@ -1974,7 +1985,7 @@
         <span class="section__label">Contact</span>
         <h2>Interested?</h2>
         <p style="max-width:500px;margin:0 auto 24px;font-size:20px;">
-          Let's talk about your project. I'm always open to new ideas and collaboration.
+          Have a product to build or a system to untangle? I can help shape the architecture and take it to release.
         </p>
         <a href="mailto:ashot.svazyan@yandex.ru" class="btn btn--brand">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
